@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $nombre, $apellido, $email, $telefono, $mensaje);
 
     if ($stmt->execute()) {
-        header("Location: index.html"); // Redirigir al formulario después de guardar
+        header("Location: /anuario/exito.html"); // Redirigir al formulario después de guardar
         exit();
     } else {
         echo "Error: " . $stmt->error;
