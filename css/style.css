@@ -489,3 +489,9 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+
+.seccion-facts {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
