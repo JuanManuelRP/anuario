@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: /anuario/exito.html"); // Redirigir al formulario después de guardar
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        error_log("Error al insertar datos: " . $stmt->error); // Registra el error
+    die("Ocurrió un problema al procesar tu solicitud. Por favor, inténtalo más tarde.");
     }
 
     $stmt->close();
